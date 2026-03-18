@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.30+commit.73712a01"
+		"version": "0.8.31+commit.fd3a2265"
 	},
 	"language": "Solidity",
 	"output": {
@@ -8,108 +8,14 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "_addr",
+						"internalType": "contract BadRandomness",
+						"name": "nftAddr",
 						"type": "address"
 					}
 				],
+				"name": "attackMint",
+				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "message",
-						"type": "string"
-					}
-				],
-				"name": "Error",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "bool",
-						"name": "success",
-						"type": "bool"
-					},
-					{
-						"indexed": false,
-						"internalType": "bool",
-						"name": "outcome",
-						"type": "bool"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "blockNumber",
-						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "blockValue",
-						"type": "uint256"
-					}
-				],
-				"name": "Result",
-				"type": "event"
-			},
-			{
-				"inputs": [],
-				"name": "coinFlip",
-				"outputs": [
-					{
-						"internalType": "contract ICoinFlip",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "flip",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getConsecutiveWins",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "predict",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -126,9 +32,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Exp.sol": "Attack"
+			"contracts/BadRandomness.sol": "Attack"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "osaka",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -140,12 +46,60 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Exp.sol": {
-			"keccak256": "0x77f652c445aa146f384573fba0e93af9d7c10af4aad5439f97a73b4118d23e9e",
+		"contracts/BadRandomness.sol": {
+			"keccak256": "0x3c39e50d14e2d98362bcf894aafef0b3c480828750917a405977913372ddb7d0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c229da8cf6dab77bd90c727b4f3874f505fbe30392ab4c121051fa58797c6ece",
-				"dweb:/ipfs/QmeamuPj1JiQj82BP4P3qfjoDZcD7Z55SKXLbXrPygcHpF"
+				"bzz-raw://758744b9be665284eb4141aa5c98e5f79c7449c9fab750cd0431f8b3605ef01a",
+				"dweb:/ipfs/QmRGUcwsTUnVsDzS6jPUKwNBDgGFYebyT6DTHKwyrVtwYX"
+			]
+		},
+		"contracts/ERC721.sol": {
+			"keccak256": "0x08154c25fa3927b8bc88d0bee23b55cf1f935bef8f0040a17e31515ac8cf0739",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7b629b7cc1caa0931e802ed5742abb8f3009857e9fb2630e3cfeefc9ca1a1380",
+				"dweb:/ipfs/QmRoUHFhmrFFUo1qwkG5AGFzv3HQjJEFQPzdrEyrhHmRC4"
+			]
+		},
+		"contracts/IERC165.sol": {
+			"keccak256": "0x9a8f9c7be8955609b5252161f118bc8a4640bb8ee82e287e6486e5ca21bf1ab5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2587358108ce107c79ad10f7b3f6172713087a5656197a4390dc1a594cb337de",
+				"dweb:/ipfs/QmRDAFxyyFVXnCMmL7Dx31fEYtrJvuhdZuSytPSTMofrAm"
+			]
+		},
+		"contracts/IERC721.sol": {
+			"keccak256": "0x527118e4caab49b1fb83be7494f9db012e8233b3673938a3aadc8eefdc133e9b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2ed996288dfeb028ea9c68a3ac518f6757ed1b019f7e4ae8f592112bd0d3a08a",
+				"dweb:/ipfs/QmTT6xBg2uY3rtLcPhoszrJ4Nx9qAwvomQ92qYVjwis8nE"
+			]
+		},
+		"contracts/IERC721Metadata.sol": {
+			"keccak256": "0x098c0358661d09857ba84b64b96dad61565c225a66279ab562f4e02f6cae9594",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ffc289433c97eff7f28cc2f6e4efd5968a45310655da9228876562425cca7603",
+				"dweb:/ipfs/QmRLsCHbr2Teyu8uoVo2uvEU8SucYv5saNbYeMTFvbrpn4"
+			]
+		},
+		"contracts/IERC721Receiver.sol": {
+			"keccak256": "0x00c9b4ed4bffa5c5b88f1d4c89f2bec0d3032c85018c4a76184f50983f60d58e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b4a6160635d5c7fbe3e69d748bf91e5243ebc9772be37e4bf828dd4ca18b2cc7",
+				"dweb:/ipfs/QmfMhjmHsAznHnCVULKmEFv6wgw5dEdXUDz5j6nxz4nYhY"
+			]
+		},
+		"contracts/String.sol": {
+			"keccak256": "0x35879cd15c16fb1e05bdf649d3768db9b2a32aa99aa9d22172a9550a63946f64",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a239a5a36d6a5beb4c049f16061c3577b02cca9b90893c863629315f731fd61c",
+				"dweb:/ipfs/QmWi1okMLtNhrCC798UGdehZFrekr16iYu4gWPfL8iDCAJ"
 			]
 		}
 	},
