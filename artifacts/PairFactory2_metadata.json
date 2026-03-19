@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.30+commit.73712a01"
+		"version": "0.8.34+commit.80d5c536"
 	},
 	"language": "Solidity",
 	"output": {
@@ -110,9 +110,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Create2.sol": "PairFactory2"
+			"contracts/create2.sol": "PairFactory2"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "osaka",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -124,12 +124,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Create2.sol": {
-			"keccak256": "0x729faf982ceb29bbb1ac1275fc3ddb1691e6a732bf37c37e06f88bdb9fc93958",
+		"contracts/create2.sol": {
+			"keccak256": "0x571d725b7646e6d57baf323d3fea15bc03aa1aef426f2708b20a8c2e9637828d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://dc0950f7b0a8f0d1afad212a8e6373157d4749b5e7ed58cafb9e3be15f1bac72",
-				"dweb:/ipfs/QmYs7T1QVUTf5Rq6X8dLr4kuTYPuCCXmxSZgYqSEcZ7AYf"
+				"bzz-raw://5ded664ef79f4fb0a5968a2622d488e4e4876624d279e047ba2685d2f094b8f2",
+				"dweb:/ipfs/QmY4ofiwFQ9Y9XZsUahd9L6UphHpGsFMHc5BqJBcAp8BBb"
 			]
 		}
 	},

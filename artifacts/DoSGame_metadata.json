@@ -1,23 +1,18 @@
 {
 	"compiler": {
-		"version": "0.8.34+commit.80d5c536"
+		"version": "0.8.31+commit.fd3a2265"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
 				"inputs": [],
-				"stateMutability": "payable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "factory",
+				"name": "balance",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "uint256",
 						"name": "",
-						"type": "address"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -27,23 +22,37 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_token0",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "_token1",
+						"name": "",
 						"type": "address"
 					}
 				],
-				"name": "initialize",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "token0",
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "players",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -56,12 +65,19 @@
 			},
 			{
 				"inputs": [],
-				"name": "token1",
+				"name": "refund",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "refundFinished",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "bool",
 						"name": "",
-						"type": "address"
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -81,7 +97,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/create2.sol": "Pair"
+			"contracts/vul/DosGame.sol": "DoSGame"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -95,12 +111,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/create2.sol": {
-			"keccak256": "0x571d725b7646e6d57baf323d3fea15bc03aa1aef426f2708b20a8c2e9637828d",
+		"contracts/vul/DosGame.sol": {
+			"keccak256": "0x1dcff5ee24510c292eee8566eda6ae075b75b6af9ecd86cf5324719f552ff471",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5ded664ef79f4fb0a5968a2622d488e4e4876624d279e047ba2685d2f094b8f2",
-				"dweb:/ipfs/QmY4ofiwFQ9Y9XZsUahd9L6UphHpGsFMHc5BqJBcAp8BBb"
+				"bzz-raw://8b28e195489cea4ab7679c1b0f0a253d6199a6c2d451b1f852f213ad8090221c",
+				"dweb:/ipfs/QmbDvS8wbVvgjoWQHaBu78WmWyiCjgURb658cyiaU4WKPH"
 			]
 		}
 	},
