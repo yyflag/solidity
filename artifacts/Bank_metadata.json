@@ -1,52 +1,42 @@
 {
 	"compiler": {
-		"version": "0.8.30+commit.73712a01"
+		"version": "0.8.34+commit.80d5c536"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
-				"inputs": [
+				"inputs": [],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
 					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
 					}
 				],
-				"name": "balanceOf",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "deposit",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getBalance",
-				"outputs": [
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					},
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "_amount",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "withdraw",
+				"name": "transfer",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -65,9 +55,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ReentrancyAttack.sol": "Bank"
+			"contracts/vul/PhishingWithTxOrigin.sol": "Bank"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "osaka",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -79,12 +69,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/ReentrancyAttack.sol": {
-			"keccak256": "0x5823fbcf76ff4654e5d06d81540c5d8d92a50efe1037222e48fe3ccc13e92ef7",
+		"contracts/vul/PhishingWithTxOrigin.sol": {
+			"keccak256": "0x38d24d1b799f5fbeb66bad0ecd400b1f18d393c9d597a3d59bfb78a32110bd2e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2c63dc65ba7af4044b2dd87bc97039628428a4cba4621d50b7907e8dcb67d518",
-				"dweb:/ipfs/QmTjx48QycXHkugksnqHhLNECeATJAsHnxJs4ec45cXZzu"
+				"bzz-raw://4b3bfe32e89e7595ba1972cdbdb4c2aa92d78a15a950d34e7d864d2c69f95d79",
+				"dweb:/ipfs/QmVQZZtkRSWDoMq5SyrnfRCPYkpt3d8p95zQ7VgzD6FHfF"
 			]
 		}
 	},
